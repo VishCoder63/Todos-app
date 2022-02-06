@@ -1,0 +1,73 @@
+body{
+  background-color:wheat;
+}
+
+.container{
+  border: 1px solid red;
+  background-color: tomato;
+  width: 50%;
+  height: 350px;
+  margin: auto;
+  margin-top: 5%;
+  padding-left: 10%;
+  padding-bottom: 5%;
+  border-radius: 10%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.inputTitle,.inputBody{
+  width: 185px;
+  height: 35px;
+}
+
+.addBtn,button{
+  color:rgb(255, 255, 255);
+  background-color:black;
+}
+
+button:disabled{
+  background-color:tomato;  
+}
+
+.todoItem{
+  width: 60%;
+  display: flex;  
+}
+.todoItem>div{  
+  /* border: 1px solid red; */
+  text-align: center;  
+  /* text-align: left; */
+  width: 50%;
+}
+.todoItem>div>h3{
+background-color: teal;
+margin: 5px;
+color: white;
+border-radius: 20%;
+height: 35px;
+}
+
+
+button{
+  font-weight: 700;
+  width: 10%;
+  margin:10px;
+  padding: 10px;
+  border: none;
+
+}
+
+
+.loading {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
