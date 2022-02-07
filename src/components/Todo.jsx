@@ -16,11 +16,11 @@ export function Todo() {
   function fetchlatestData() {
     setLoading(true)
     //pagination implemented using _page and _limit
-    fetch(`http://localhost:3001/todos?_page=${page}&_limit=${3}`).then(e => e.json()).then(e => {
+    
+    fetch(`https://fake-api-project-for-masai.herokuapp.com/tasks?_page=${page}&_limit=${3}`).then(e => e.json()).then(e => {
       if(e.length==0) setdisableNext(true)
       setTodos(e);
-      setLoading(false)
-      
+      setLoading(false)      
     })
   }
 
@@ -41,7 +41,7 @@ export function Todo() {
         else {
           
           let td = { title, task: text, status: false };  
-          fetch('http://localhost:3001/todos', {
+          fetch('https://fake-api-project-for-masai.herokuapp.com/tasks', {
               method: "POST",
               body: JSON.stringify(td),
               headers: {
